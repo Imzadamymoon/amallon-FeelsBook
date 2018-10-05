@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_EmotionList"
+        android:layout_width="255dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Select_Feeling_Text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/Love_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:srcCompat="@color/colorAccent"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="2dp" />
+
+            <ImageButton
+                android:id="@+id/Sad_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="32dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/Fear_Button"
+                app:srcCompat="@android:color/holo_blue_dark"
+                tools:layout_editor_absoluteX="205dp" />
+
+            <ImageButton
+                android:id="@+id/Anger_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/Joy_Button"
+                app:srcCompat="@android:color/holo_red_dark"
+                tools:layout_editor_absoluteX="165dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/Surprise_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:srcCompat="@android:color/holo_purple"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="76dp" />
+
+            <ImageButton
+                android:id="@+id/Joy_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toStartOf="@+id/Fear_Button"
+                app:srcCompat="@android:color/holo_orange_light"
+                tools:layout_editor_absoluteY="76dp" />
+
+            <ImageButton
+                android:id="@+id/Fear_Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                app:srcCompat="@android:color/holo_green_dark"
+                tools:layout_editor_absoluteX="205dp"
+                tools:layout_editor_absoluteY="76dp" />
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Add_Comment_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Add a Comment:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/User_Input_Comment"
+        app:layout_constraintTop_toBottomOf="@+id/Feeling_Chosen_Text" />
+
+    <EditText
+        android:id="@+id/User_Input_Comment"
+        android:layout_width="255dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Add_Comment_Text" />
+
+    <Button
+        android:id="@+id/Post_Button"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:onClick="sendPost"
+        android:text="Post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/User_Input_Comment" />
+
+    <TextView
+        android:id="@+id/Select_Feeling_Text"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Select a Feeling:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup_EmotionList"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_EmotionList"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Feeling_Chosen_Text"
+        android:layout_width="104dp"
+        android:layout_height="19dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="Feeling Chosen:"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_EmotionList"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_EmotionList" />
+
+    <TextView
+        android:id="@+id/ChosenFeeling"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:text="Chosen Feeling"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup_EmotionList"
+        app:layout_constraintStart_toEndOf="@+id/Feeling_Chosen_Text"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_EmotionList" />
+
+</android.support.constraint.ConstraintLayout>
