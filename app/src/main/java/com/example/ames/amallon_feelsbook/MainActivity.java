@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     public static final String COMMENT_MESSAGE = "com.example.ames.amallon_feelsbook.COMMENT";
     public static final String CHOSEN_FEELING = "com.example.ames.amallon_feelsbook.FEELING";
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void sendPost(View view){
+    public void seePostingsPage(View view){
         Intent intent = new Intent (this, comment_page_master.class);
 
         EditText UsersComment = (EditText) findViewById(R.id.User_Input_Comment);

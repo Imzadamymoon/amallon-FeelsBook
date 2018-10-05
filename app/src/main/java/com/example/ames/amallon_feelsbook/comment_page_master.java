@@ -5,18 +5,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class comment_page_master extends AppCompatActivity {
 
     private Boolean Post01 = false;
     private Boolean Post02 = false;
+    List Master_Feeling_List = new ArrayList();
+    List Master_Comment_List = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment_page_master);
+
+        Master_Feeling_List.add(MainActivity.CHOSEN_FEELING);
+        Master_Comment_List.add(MainActivity.COMMENT_MESSAGE);
+
 
         if (Post01 == false){
             Intent intent = getIntent();
@@ -41,11 +51,10 @@ public class comment_page_master extends AppCompatActivity {
             Post01 = true;
         }
     }
-    protected void addNewPost(View view){
-        Intent intent = new Intent (this, MainActivity.class);
-        Button New_Post_Button = (Button) findViewById(R.id.New_Post_Button);
 
-        startActivity(intent);
+    protected void makeNewPost(View view){
+        Intent Return_MainScreen = new Intent (this, MainActivity.class);
+        startActivity(Return_MainScreen);
+        finish();
     }
-
 }
