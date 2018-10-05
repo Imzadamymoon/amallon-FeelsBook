@@ -4,18 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class comment_page_master extends AppCompatActivity {
-
+// Variables
     private Boolean Post01 = false;
-    private Boolean Post02 = false;
     List Master_Feeling_List = new ArrayList();
     List Master_Comment_List = new ArrayList();
 

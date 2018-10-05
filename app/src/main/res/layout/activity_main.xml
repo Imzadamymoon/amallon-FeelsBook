@@ -27,7 +27,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:srcCompat="@color/colorAccent"
                 tools:layout_editor_absoluteX="53dp"
                 tools:layout_editor_absoluteY="2dp" />
@@ -38,7 +38,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="32dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:layout_constraintBottom_toTopOf="@+id/Fear_Button"
                 app:srcCompat="@android:color/holo_blue_dark"
                 tools:layout_editor_absoluteX="205dp" />
@@ -48,7 +48,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:layout_constraintBottom_toTopOf="@+id/Joy_Button"
                 app:srcCompat="@android:color/holo_red_dark"
                 tools:layout_editor_absoluteX="165dp" />
@@ -66,7 +66,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:srcCompat="@android:color/holo_purple"
                 tools:layout_editor_absoluteX="69dp"
                 tools:layout_editor_absoluteY="76dp" />
@@ -76,7 +76,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:layout_constraintEnd_toStartOf="@+id/Fear_Button"
                 app:srcCompat="@android:color/holo_orange_light"
                 tools:layout_editor_absoluteY="76dp" />
@@ -86,7 +86,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:onClick="onClick"
+                android:onClick="onChooseFeeling"
                 app:srcCompat="@android:color/holo_green_dark"
                 tools:layout_editor_absoluteX="205dp"
                 tools:layout_editor_absoluteY="76dp" />

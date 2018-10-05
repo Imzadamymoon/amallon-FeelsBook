@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     String ChosenEmotion = "";
 
-    public void onClick(View v) {
+    public void onChooseFeeling(View v) {
         TextView ChosenFeelingText = (TextView) findViewById(R.id.ChosenFeeling);
         Intent intent = new Intent(this, comment_page_master.class);
 
